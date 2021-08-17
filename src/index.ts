@@ -17,7 +17,7 @@ client.on("ready", () => {
 });
 
 client.on("message", (msg: any) => {
-  if (msg.content?.[0] !== "!") return;
+  if (msg.content?.[0] !== commandPrefix) return;
 
   // put special cond somewhere else
   const specialKeywords = ["kmav", "kmao"];
