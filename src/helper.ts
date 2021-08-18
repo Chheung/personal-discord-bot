@@ -18,5 +18,5 @@ export const whatToJ = (msg: string) => {
     if (msg.includes(name)) return reply;
   }
 
-  return "Ot skoil a neng te voy.";
+  return "WHO THE FUCK IS THAT?";
 };

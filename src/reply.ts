@@ -8,6 +8,14 @@ export const checkCategory = (msg: string): CATEGORY_TYPES | null => {
   return category;
 };
 
+export const whatToReply = (msgContext: any, msg: string) => {
+  const category = checkCategory(msg);
+  if (!category)
+    return reply(msgContext, "I DONT UNDERSTAND UR FUCKING COMMENT?");
+
+  return whatToDoWithCategory(msgContext, msg, category);
+};
+
 export const whatToDoWithCategory = (
   msgContext: any,
   msg: string,
@@ -19,13 +27,6 @@ export const whatToDoWithCategory = (
     default:
       return null;
   }
-};
-
-export const whatToReply = (msgContext: any, msg: string) => {
-  const category = checkCategory(msg);
-
-  if (!category) return reply(msgContext, "Ot yol te voy.");
-  return whatToDoWithCategory(msgContext, msg, category);
 };
 
 export const reply = (msgContext: any, msg: string) => {
