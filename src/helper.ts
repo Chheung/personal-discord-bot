@@ -20,3 +20,7 @@ export const whatToJ = (msg: string) => {
 
   return "WHO THE FUCK IS THAT?";
 };
+
+export const howToThank = (msg: string) => {
+  return "Thanks boss Chheung";
+};

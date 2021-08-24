@@ -1,4 +1,4 @@
-import { categoryDecipher, whatToJ } from "./helper";
+import { categoryDecipher, howToThank, whatToJ } from "./helper";
 import { CATEGORY_TYPES } from "./type";
 
 export const checkCategory = (msg: string): CATEGORY_TYPES | null => {
@@ -24,6 +24,8 @@ export const whatToDoWithCategory = (
   switch (category) {
     case "J_MAE":
       return reply(msgContext, whatToJ(msg));
+    case "COMPLIMENT":
+      return reply(msgContext, howToThank(msg));
     default:
       return null;
   }

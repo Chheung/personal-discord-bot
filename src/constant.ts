@@ -13,4 +13,8 @@ export const CATEGORY: { key: string; value: CATEGORY_TYPES }[] = [
     key: "j a",
     value: "J_MAE",
   },
+  {
+    key: "good boy",
+    value: "COMPLIMENT",
+  },
 ];
